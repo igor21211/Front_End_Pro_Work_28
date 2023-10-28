@@ -5,7 +5,7 @@ class Person {
   }
 
   showInfo() {
-    console.log(`Person name ${this.name} he is ${this.age} old!`);
+    return `Person name ${this.name} he is ${this.age} old!`;
   }
 }
 
@@ -29,11 +29,12 @@ class Car {
 
   showInfo() {
     console.log(
-      `Car make is ${this.make} model is ${this.model} Year of issue is ${this.yearOfIssue} License plate is ${this.licensePlate}`
+      `Car make is ${this.make} model is ${this.model} Year of issue is ${
+        this.yearOfIssue
+      } License plate is ${this.licensePlate} Owner: ${
+        this.person?.showInfo() || "don't have owner"
+      }`
     );
-    if (this.person) {
-      this.person.showInfo();
-    }
   }
 }
 
