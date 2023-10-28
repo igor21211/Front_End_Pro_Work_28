@@ -32,7 +32,7 @@ class Car {
       `Car make is ${this.make} model is ${this.model} Year of issue is ${
         this.yearOfIssue
       } License plate is ${this.licensePlate} Owner: ${
-        this.person?.showInfo() || "don't have owner"
+        this.person?.showInfo() ?? "don't have owner"
       }`
     );
   }
