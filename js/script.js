@@ -20,11 +20,12 @@ class Car {
   addOwner(person) {
     if (person.age > 18) {
       this.person = person;
-    } else {
-      console.log(
-        `${person.name} can't buy car because he is ${person.age} is not 18`
-      );
+      return;
     }
+
+    console.log(
+      `${person.name} can't buy car because he is ${person.age} is not 18`
+    );
   }
 
   showInfo() {
